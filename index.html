@@ -69,6 +69,11 @@
 
         container.find( '.success-msg' ).fadeIn();
       });
+
+      navigator.clipboard.readText().then( function ( clipText ) {
+        $( "#geo-from" ).val( clipText );
+        $( "#geo-input" ).trigger( 'submit' );
+      } );
     </script>
   </footer>
 </body>
